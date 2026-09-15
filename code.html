@@ -1,0 +1,963 @@
+<!DOCTYPE html><html lang="ru" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "secondary-fixed-dim": "#afcfb0",
+        "surface-variant": "#e5e2dc",
+        "on-secondary": "#ffffff",
+        "tertiary-fixed-dim": "#edbd9b",
+        "surface-tint": "#456646",
+        "on-surface": "#1c1c18",
+        "secondary": "#49654c",
+        "on-error": "#ffffff",
+        "on-secondary-container": "#4f6b52",
+        "on-tertiary-fixed": "#2e1502",
+        "on-secondary-fixed-variant": "#324d36",
+        "surface-dim": "#dcdad4",
+        "outline-variant": "#c2c8be",
+        "background": "#fcf9f3",
+        "error": "#ba1a1a",
+        "inverse-on-surface": "#f3f0ea",
+        "on-tertiary": "#ffffff",
+        "on-error-container": "#93000a",
+        "primary-fixed": "#c7ecc3",
+        "on-primary-fixed": "#022108",
+        "surface": "#fcf9f3",
+        "tertiary": "#664429",
+        "on-tertiary-container": "#ffd8be",
+        "outline": "#737970",
+        "on-surface-variant": "#424841",
+        "on-primary-container": "#c4eac1",
+        "tertiary-fixed": "#ffdcc4",
+        "surface-container-high": "#ebe8e2",
+        "primary": "#335334",
+        "tertiary-container": "#805b3f",
+        "error-container": "#ffdad6",
+        "secondary-container": "#cbebcb",
+        "primary-fixed-dim": "#abd0a8",
+        "surface-bright": "#fcf9f3",
+        "surface-container-lowest": "#ffffff",
+        "inverse-surface": "#31312d",
+        "surface-container-highest": "#e5e2dc",
+        "surface-container-low": "#f6f3ed",
+        "on-background": "#1c1c18",
+        "on-primary": "#ffffff",
+        "primary-container": "#4a6b4a",
+        "on-primary-fixed-variant": "#2e4e30",
+        "on-secondary-fixed": "#06200d",
+        "inverse-primary": "#abd0a8",
+        "secondary-fixed": "#cbebcb",
+        "surface-container": "#f0eee8",
+        "on-tertiary-fixed-variant": "#613f26"
+      },
+      "borderRadius": {
+        "DEFAULT": "1rem",
+        "lg": "2rem",
+        "xl": "3rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "margin-lg": "5rem",
+        "margin-md": "2.5rem",
+        "space-lg": "2rem",
+        "gutter-lg": "2rem",
+        "space-xl": "3rem",
+        "gutter": "1.5rem",
+        "space-xs": "0.5rem",
+        "space-sm": "0.75rem",
+        "space-md": "1rem",
+        "margin": "1.25rem"
+      },
+      "fontFamily": {
+        "quote-editorial": [
+          "Newsreader"
+        ],
+        "display-mobile": [
+          "Newsreader"
+        ],
+        "headline-md": [
+          "Newsreader"
+        ],
+        "body-md": [
+          "Manrope"
+        ],
+        "display": [
+          "Newsreader"
+        ],
+        "body-lg": [
+          "Manrope"
+        ],
+        "body-sm": [
+          "Manrope"
+        ],
+        "headline-sm": [
+          "Newsreader"
+        ],
+        "headline-lg": [
+          "Newsreader"
+        ],
+        "label-md": [
+          "Manrope"
+        ],
+        "label-sm": [
+          "Manrope"
+        ],
+        "headline-lg-mobile": [
+          "Newsreader"
+        ]
+      },
+      "fontSize": {
+        "quote-editorial": [
+          "26px",
+          {
+            "lineHeight": "1.45",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "400"
+          }
+        ],
+        "display-mobile": [
+          "40px",
+          {
+            "lineHeight": "1.2",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "500"
+          }
+        ],
+        "headline-md": [
+          "30px",
+          {
+            "lineHeight": "1.25",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "500"
+          }
+        ],
+        "body-md": [
+          "16px",
+          {
+            "lineHeight": "1.6",
+            "letterSpacing": "0",
+            "fontWeight": "400"
+          }
+        ],
+        "display": [
+          "68px",
+          {
+            "lineHeight": "1.15",
+            "letterSpacing": "-0.025em",
+            "fontWeight": "500"
+          }
+        ],
+        "body-lg": [
+          "19px",
+          {
+            "lineHeight": "1.6",
+            "letterSpacing": "-0.005em",
+            "fontWeight": "400"
+          }
+        ],
+        "body-sm": [
+          "14px",
+          {
+            "lineHeight": "1.5",
+            "letterSpacing": "0.005em",
+            "fontWeight": "400"
+          }
+        ],
+        "headline-sm": [
+          "22px",
+          {
+            "lineHeight": "1.3",
+            "letterSpacing": "0",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-lg": [
+          "44px",
+          {
+            "lineHeight": "1.2",
+            "letterSpacing": "-0.015em",
+            "fontWeight": "500"
+          }
+        ],
+        "label-md": [
+          "14px",
+          {
+            "lineHeight": "1",
+            "letterSpacing": "0.02em",
+            "fontWeight": "600"
+          }
+        ],
+        "label-sm": [
+          "12px",
+          {
+            "lineHeight": "1",
+            "letterSpacing": "0.04em",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-lg-mobile": [
+          "32px",
+          {
+            "lineHeight": "1.25",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "500"
+          }
+        ]
+      }
+    }
+  }
+};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50"><div class="bg-primary text-surface-container-low" style="background-color: rgb(51, 83, 52);"><div class="max-w-7xl mx-auto px-gutter flex items-center justify-between h-10 font-body-sm text-body-sm"><div class="flex items-center gap-space-md text-surface-container-low"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary-fixed">location_on</span>г. Самара, пр. Карла Маркса, 63/1 / Онлайн по всему миру</span><span class="hidden sm:inline text-outline-variant/60">•</span><a class="hidden sm:flex items-center gap-1 hover:text-white transition-colors text-surface-container-low" href="tel:+79270060280"><span class="material-symbols-outlined text-[16px] text-primary-fixed">call</span>+7 (927) 006-02-80</a></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed">eco</span><span class="font-label-sm text-label-sm text-tertiary-fixed">Первая консультация со скидкой 20%</span></div></div></div><div class="bg-surface-container-lowest shadow-sm border-t" style="background-color: rgb(255, 255, 255); border-bottom: 1px solid rgb(229, 226, 220);"><div class="max-w-7xl mx-auto px-gutter h-20 flex items-center justify-between"><a class="flex items-center gap-space-sm group" data-path="glavnaya" href="#"><img alt="Логотип клиники Диалектика" class="w-10 h-10 rounded-full object-contain border border-secondary-container shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VG1aRgZdfsJqzxV6a_jca9iFb6DV6aYHDEfrWBCGmMag9nWPLBTbYRW_iWVnvzwX_elT9AbFc5D_jinMH-afT1y92jpMt5HexcRflglqsdsv_BbKFMaqyBzBAiyC3vKwrVWCjeMptjsjsaPzYs9wPeyX24swAN8N3LBuOjVc_RqmWft3xibVkMAMYohER2KFofUsVkd5U80nkvCQ6ZPeABCue8cRAaEK_oiGv2tfrYgd4NPkFD23uKEcOk"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none">Диалектика</span><span class="font-label-sm text-[10px] tracking-wider uppercase text-on-surface-variant mt-0.5">Центр психотерапии</span></div></a><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="uslugi" href="#">Услуги</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="specialisty" href="#">Специалисты</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="o-nas" href="#">О нас</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="blog" href="#">Блог</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="kontakty" href="#">Контакты</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center rounded-full text-on-primary font-semibold font-label-md text-label-md transition-all duration-200 shadow-sm hover:bg-on-primary-fixed-variant" data-path="zapis-na-priyom" href="#" style="background-color: rgb(51, 83, 52); color: rgb(255, 255, 255); padding: 12px 24px;">Записаться</a></div></div></div></header><main class="w-full pt-[120px] bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- 1. HERO SECTION -->
+<section class="relative w-full min-h-[90vh] py-20 lg:py-24 overflow-visible flex items-center z-10">
+  <div class="w-full grid grid-cols-1 lg:grid-cols-12 items-center relative">
+    <!-- Left Column: Content & Reassurance (~40% proportion = 5 cols) -->
+    <div class="lg:col-span-5 flex flex-col items-start gap-space-md z-20 px-gutter sm:px-space-lg lg:pl-20 lg:pr-space-md py-space-md">
+      <!-- Eyebrow Pill Tag -->
+      <div class="inline-flex items-center gap-2 px-space-md py-1.5 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm">
+        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        <span class="">Профессиональная поддержка • Онлайн по всему миру</span>
+      </div>
+      <!-- Serif H1 Headline -->
+      <h1 class="font-display text-display-mobile md:text-display text-on-surface tracking-tight">
+        Обретите внутренний <span class="text-primary italic font-headline-lg">баланс</span> и опору.
+      </h1>
+      <!-- Subtitle Paragraph -->
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+        Квалифицированные психологи и психотерапевты доказательных направлений (КПТ, ACT, ДБТ). Помогаем справиться с тревогой, выгоранием и кризисами в бережной и безопасной атмосфере.
+      </p>
+      <!-- CTA Buttons Row -->
+      <div class="flex flex-wrap items-center gap-space-sm pt-space-xs w-full sm:w-auto">
+        <a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-4 rounded-full bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-label-md text-label-md transition-all duration-200 shadow-md hover:shadow-lg transform active:scale-95" data-path="zapis-na-priyom" href="#">
+          <span class="material-symbols-outlined text-[20px]">calendar_today</span>
+          <span class="">Записаться на сессию</span>
+        </a>
+        <a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-4 rounded-full bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md transition-all duration-200" data-path="uslugi" href="#">
+          <span class="">Наши услуги</span>
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+      </div>
+      <!-- Social Proof Element -->
+      <div class="flex flex-wrap items-center gap-space-md pt-space-md">
+        <div class="flex -space-x-2.5 overflow-hidden">
+          <img class="inline-block h-11 w-11 rounded-full object-cover shadow-sm" data-alt="Warm portrait photograph of a peaceful client smiling gently, neutral natural warm studio background, soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYqpXXNL7GCK4yc3SwNdrkOO9Qf-Vihsph0F2DHd8M9oqfEqWaTJk50r06y_3p7lSoADx3jYUBuudMHPyec7Z9DPHx-pirgHYgzR80g3VhmVGZDtSd8qTsn4_PsjMffAt5XAFRabNso4W5dkTmQWKw4Q8URlTFLLy_UU904hM29zrJN_gyQbfXSzcN5vC0PKU1_f9ypVVrFMrnGhCtZtozaH0DnNmtFAUi7DYvT49yi0KjWf686EaYHQ">
+          <img class="inline-block h-11 w-11 rounded-full object-cover shadow-sm" data-alt="Portrait of an empathetic young man looking calm and confident, warm aesthetic, earthy tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhQdAppnjJwIc2GyzgDo_WStntdZdJHS9H3-OwOptbvM4ZbdxvZ-kNnq46o_CudqRNQgJFMaFk4IIEESjH5YSRXS_uGntTv_WF4wL6-4PjvmOInTuLbUaWSRzeNr5xmtUgR7TBwU6j7EMUTFn5-9KMWM_e-vE_KH6Ud-mV9gvNGFA_zI8a0o9bjmA1-5IfA_jDTO_AgMgOEMPs4E4T70P55OnIsJnuN5552P2GF3X_TlnRKdfCLXL9PA">
+          <img class="inline-block h-11 w-11 rounded-full object-cover shadow-sm" data-alt="Portrait of a mature serene woman with soft natural makeup, warm botanical interior lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcnSaJOq1UGac9IN_e_Y8s42lpBqmGjHoKNOh8v00wF1nXkgWdBqTOk5kSblqcTrp4EIp_N2__hVEjsxWEVx22pXHxccOMvtzrxnPfiWG6_Fc0W5wXBweLj9qbnWWdg6GPYc1RrG8Uc14H303Ko-IZwiWypnn-fKZyI53GiV9iyyYtvFjJtWTycWrb2Da5hGk_uQgw5ujkWvclZiG4w1eQOhRbTZ8Aqxs_FukZL1r-XSMx59AR91evPw">
+          <img class="inline-block h-11 w-11 rounded-full object-cover shadow-sm" data-alt="Portrait of a happy relaxed client in modern warm-lit room, subtle green and linen tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi4P9angLh29xtvcXJVBEqxxsaGsz1q_jQqBM4IBLNrHKfYpcUih1j1qKyddr7keC06-O1s2lod9hjUcggTA68pEjATwg2XsYvkeh_3kIX0H4YE2JZoEYaUYzHhYZ9u_DDAtLPvEfHDRTTSYbPadMUqYP9sS9gBzho-88aOrD8yYbr4akf7oDDr38KoutRBb7BIZ3AZFX-RwhXp_mNjg-0_eGfioglTypCNM9GPtFw1TjJ8YDUMz35nQ">
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-1 text-tertiary">
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+            <span class="font-label-md text-label-md text-on-surface font-semibold ml-1">4.9</span>
+          </div>
+          <span class="font-body-sm text-body-sm text-on-surface-variant">350+ проверенных отзывов клиентов</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Extended Photo (~60% proportion = 7 cols, edge-to-edge right) -->
+    <div class="lg:col-span-7 relative w-full h-[480px] lg:h-auto lg:absolute lg:right-0 lg:top-[-70px] lg:bottom-[-70px] lg:w-[58%] z-10 flex items-end justify-end pointer-events-none">
+      <img class="w-full h-full object-cover object-top" style="mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,1) 45%); -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,1) 45%);" alt="Психолог клиники Диалектика" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxN7wiaCUkMg9MyU2TSTxUl1VrBOoiFZTueDLFuswbnBsIagUsXogOq4DqyVUJiShv8Kt7LB5RhVz90GJvSM93xocSu9RjSTZUNXL4wGkMtxqDzY8tQFEgMm-WDV7JWFrjqhVzofxLoh4oCHvU7RuYKMvCJpUs14QIc4QcDvwSBAHbmZPnMUUfk6rYdBzaFTV-c85jhVJsZR5lfzfzVo4FCILkhOyo7kAcOISwuXNqibHJsPB1AgSUO72dWLwZ0fh8b5I">
+      <!-- Floating Pill Card on photo -->
+      <div class="absolute z-20 mb-8 mr-6 lg:mr-16 p-space-md rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-md border border-surface-variant/40 flex items-center justify-between gap-space-md max-w-sm pointer-events-auto">
+        <div class="flex items-center gap-space-sm">
+          <span class="w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+            <span class="material-symbols-outlined text-[20px]">schedule</span>
+          </span>
+          <div>
+            <span class="font-label-sm text-[10px] uppercase tracking-wider text-on-surface-variant block leading-tight">Ближайшая запись</span>
+            <span class="font-body-sm font-semibold text-on-surface leading-tight">Сегодня, 18:00</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          <span class="">50 мин • Онлайн</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 2. TRUST BAR -->
+<section class="w-full max-w-7xl mx-auto px-gutter -mt-4 mb-space-xl">
+<div class="bg-surface-container-lowest rounded-lg p-space-md lg:p-space-lg shadow-[0_4px_24px_rgba(31,42,31,0.06)]">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md lg:gap-space-lg">
+<!-- Trust Item 1 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-11 h-11 rounded-full bg-secondary-container/60 text-primary flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">favorite</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[16px] text-on-surface font-semibold leading-snug">Персональный подход</h4>
+<p class="font-body-sm text-[13px] text-on-surface-variant mt-1 leading-normal">Тщательный подбор терапевта под ваш уникальный запрос</p>
+</div>
+</div>
+<!-- Trust Item 2 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-11 h-11 rounded-full bg-secondary-container/60 text-primary flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[16px] text-on-surface font-semibold leading-snug">Лицензированные врачи</h4>
+<p class="font-body-sm text-[13px] text-on-surface-variant mt-1 leading-normal">Профильное образование, супервизии, опыт от 5 лет</p>
+</div>
+</div>
+<!-- Trust Item 3 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-11 h-11 rounded-full bg-secondary-container/60 text-primary flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">lock</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[16px] text-on-surface font-semibold leading-snug">Конфиденциальность</h4>
+<p class="font-body-sm text-[13px] text-on-surface-variant mt-1 leading-normal">Соблюдение этического кодекса и защита персональных данных</p>
+</div>
+</div>
+<!-- Trust Item 4 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-11 h-11 rounded-full bg-secondary-container/60 text-primary flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">event_available</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[16px] text-on-surface font-semibold leading-snug">Гибкий график</h4>
+<p class="font-body-sm text-[13px] text-on-surface-variant mt-1 leading-normal">Сессии онлайн из любой точки мира в удобные часы</p>
+</div>
+</div>
+<!-- Trust Item 5 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-11 h-11 rounded-full bg-secondary-container/60 text-primary flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">spa</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[16px] text-on-surface font-semibold leading-snug">Доказательные методы</h4>
+<p class="font-body-sm text-[13px] text-on-surface-variant mt-1 leading-normal">КПТ, ДБТ, схема-терапия, ACT с подтвержденной эффективностью</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. SERVICES GRID -->
+<!-- INTERACTIVE BOOKING SECTION -->
+<section class="w-full max-w-7xl mx-auto px-gutter py-space-xl lg:py-margin-md" id="booking-section">
+<!-- Section Header -->
+<div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-space-lg">
+<div class="inline-flex items-center gap-2 px-space-md py-1.5 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm mb-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="">Быстрая запись</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Забронируйте встречу</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Три простых шага — и вы на пути к поддержке специалиста</p>
+</div>
+<!-- Stepper -->
+<div class="flex items-center justify-center max-w-md mx-auto mb-space-lg gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-semibold">1</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Дата и время</span>
+</div>
+<div class="w-12 sm:w-20 h-0.5 bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm">2</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Контакты</span>
+</div>
+</div>
+<!-- Large Interactive Booking Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_24px_rgba(31,42,31,0.06)] p-space-md sm:p-space-lg border border-surface-variant/40">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg">
+<!-- Left: Specialist Selector Card -->
+<div class="lg:col-span-4 flex flex-col justify-between bg-surface-container-low/50 rounded-lg p-space-md border border-surface-variant/40">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">Выбранный психолог</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">&lt; 1 из 2 &gt;</span>
+</div>
+<div class="relative aspect-square rounded-lg overflow-hidden mb-space-sm shadow-sm">
+<img alt="Иванов Андрей Андреевич" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida/AEtjO1WwXiH7PyzwrJjltu8rXKtcBkwSIMwGYrI6uK8IXucE7A3Csy2UXifGU9zpDDgM305006i4QmNyu3GbVuP60ey3dK9_rF5Hep00QahMKQd5I7-wKe1Pu8CAS_-t26TadLtthMNCkcxP3-D12QqJel29c1CU64GTv7T8XhUua74Gv2vwGXOdo6-I3KFhWhKGO7iqk_C2BinDyyNgbnh4BAIwWGouH2wVWGlwWozJeJpqGgx4oc9wOegXcXa1">
+<div class="absolute bottom-2 left-2 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-[12px] flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="">Индивидуальная консультация, 50 мин</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-[20px] text-on-surface font-semibold">Иванов Андрей Андреевич</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Психолог • Опыт 7 лет</p>
+<div class="flex items-center gap-1 text-tertiary mt-2">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">4.9</span>
+<span class="font-body-sm text-[13px] text-on-surface-variant ml-1">(120+ сессий)</span>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-surface-variant/40 flex items-center justify-between">
+<span class="font-body-sm text-on-surface-variant text-[13px]">Стоимость сессии</span>
+<span class="font-headline-sm text-[18px] text-primary font-semibold">4 500 ₽</span>
+</div>
+</div>
+<!-- Center: Month Calendar -->
+<div class="lg:col-span-4 flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-headline-sm text-[18px] text-on-surface font-semibold">Сентябрь 2026</span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Day names header -->
+<div class="grid grid-cols-7 text-center font-label-sm text-[12px] text-on-surface-variant mb-2">
+<span class="">Пн</span><span class="">Вт</span><span class="">Ср</span><span class="">Чт</span><span class="">Пт</span><span class="">Сб</span><span class="">Вс</span>
+</div>
+<!-- Days grid -->
+<div class="grid grid-cols-7 gap-1 text-center font-body-sm text-[14px]">
+<span class="py-2 text-outline-variant/60">31</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">1</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">2</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">3</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">4</span>
+<span class="py-2 text-outline-variant">5</span>
+<span class="py-2 text-outline-variant">6</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">7</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">8</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">9</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">10</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">11</span>
+<span class="py-2 text-outline-variant">12</span>
+<span class="py-2 text-outline-variant">13</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">14</span>
+<!-- Selected Day 15 -->
+<span class="py-2 bg-primary text-on-primary rounded-full font-semibold shadow-sm cursor-pointer">15</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">16</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">17</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">18</span>
+<span class="py-2 text-outline-variant">19</span>
+<span class="py-2 text-outline-variant">20</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">21</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">22</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">23</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">24</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">25</span>
+<span class="py-2 text-outline-variant">26</span>
+<span class="py-2 text-outline-variant">27</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">28</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">29</span>
+<span class="py-2 text-on-surface hover:bg-surface-container rounded-full cursor-pointer">30</span>
+<span class="py-2 text-outline-variant/60">1</span>
+<span class="py-2 text-outline-variant/60">2</span>
+<span class="py-2 text-outline-variant/60">3</span>
+<span class="py-2 text-outline-variant/60">4</span>
+</div>
+<div class="mt-4 flex items-center justify-center gap-4 text-[12px] text-on-surface-variant font-label-sm">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary"></span>Выбранный день</span>
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary-container"></span>Есть слоты</span>
+</div>
+</div>
+<!-- Right: Available Time Slots -->
+<div class="lg:col-span-4 flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-headline-sm text-[18px] text-on-surface font-semibold">Доступное время</span>
+<span class="font-body-sm text-[13px] text-on-surface-variant">МСК (UTC+3)</span>
+</div>
+<div class="grid grid-cols-2 gap-2 font-body-sm">
+<button class="py-2 px-3 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container text-on-surface text-center transition-colors" type="button">10:00</button>
+<button class="py-2 px-3 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container text-on-surface text-center transition-colors" type="button">10:45</button>
+<button class="py-2 px-3 rounded-DEFAULT bg-primary text-on-primary font-semibold text-center shadow-sm" type="button">11:30</button>
+<button class="py-2 px-3 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container text-on-surface text-center transition-colors" type="button">12:15</button>
+<button class="py-2 px-3 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container text-on-surface text-center transition-colors" type="button">13:00</button>
+<button class="py-2 px-3 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container text-on-surface text-center transition-colors" type="button">13:45</button>
+<button class="py-2 px-3 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container text-on-surface text-center transition-colors" type="button">14:30</button>
+<button class="py-2 px-3 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container text-on-surface text-center transition-colors" type="button">15:15</button>
+<button class="py-2 px-3 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container text-on-surface text-center transition-colors" type="button">16:00</button>
+<button class="py-2 px-3 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container text-on-surface text-center transition-colors" type="button">16:45</button>
+</div>
+<p class="font-body-sm text-[13px] text-on-surface-variant mt-space-sm leading-normal flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+<span class="">Длительность: 50 минут (онлайн)</span>
+</p>
+</div>
+</div>
+<!-- Bottom Bar: Summary & CTA -->
+<div class="mt-space-lg pt-space-md border-t border-surface-variant/40 flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+</div>
+<div>
+<span class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-wider block">Выбранное время</span>
+<span class="font-headline-sm text-[18px] text-on-surface font-semibold">15 Сент., 11:30</span>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-2 px-space-xl py-3.5 rounded-full bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-label-md text-label-md transition-all duration-200 shadow-md hover:shadow-lg transform active:scale-95 w-full sm:w-auto" data-path="zapis-na-priyom" href="#">
+<span class="">Продолжить</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section><section class="w-full py-space-xl lg:py-margin-md bg-surface-container-low/60">
+<div class="max-w-7xl mx-auto px-gutter">
+<!-- Section Header -->
+<div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-space-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary mb-2 font-semibold">Направления работы</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">С чем мы работаем</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Комплексная психологическая поддержка для взрослых, пар и подростков с опорой на клинические протоколы.</p>
+</div>
+<!-- 4 Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1: Individual -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+<div class="relative h-56 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Intimate peaceful therapy room with comfortable green linen armchair and a glass of water on a wooden table, warm gentle sunlight filtering in" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPdMfB1HZ-aZ5MQNBcDplzYvtgkX00vAk8-_s4a1zPlOa3sqq5fjk_-iDHcGSYFZJNEyX4_cCjgsx4Iz8yKQCT2WinN9Fz3mhEB5xY4jmyMwhE50pKgFXiBEV3OwnU-1TQvPqmg07S2SdHE3jbGcGbpyEd51vQZNgzE9yiLAPr4rql9_5ekj2WzTYshX-ULiRUiMt9Se8rkM9OS6D5tG2UJAYRQFxX3qJd4IsZMIShtpJcAzlX1UnmKw">
+<div class="absolute top-4 left-4 w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-grow justify-between gap-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Индивидуальная терапия</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Работа с тревожностью, низкой самооценкой, поиском ориентиров, эмоциональным выгоранием и хроническим стрессом.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-on-primary-fixed-variant pt-2 group-hover:translate-x-1 transition-all" data-path="individualnaya-terapiya" href="#">
+<span class="">Подробнее</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 2: Couples -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+<div class="relative h-56 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Two people sitting in a cozy sunlit room during a supportive conversation holding warm ceramic tea mugs, calm atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaLD6AfJQzU34KuH473bSseeJNeWnIaSXiVM96yIQNkHGDMlZ6F_19cMXHVlHLnynpYNKaAHq4vLk471b6uTAh1TKzGfLZLJcpyVPUQ9uA35NING5jmX_M7cQQKQxesiBhVFktnfXCHUPUocZBn5caJCutPXt-RsM5jWUU9W0GTf8GrNeHXmttCAz1E2fHWrIc-ujoOaD1F1ctNkJGOKnjBRvcUyH_GDuHVx0noIIq-5vOHH48V7sbPw">
+<div class="absolute top-4 left-4 w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">diversity_1</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-grow justify-between gap-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Парная и семейная терапия</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Разрешение конфликтов, бережная коммуникация, восстановление доверия и преодоление кризисных этапов в отношениях.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-on-primary-fixed-variant pt-2 group-hover:translate-x-1 transition-all" data-path="semeynaya-konsultaciya" href="#">
+<span class="">Подробнее</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3: Anxiety & Depression -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+<div class="relative h-56 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Thoughtful person sitting by a large window with soft warm morning light, finding emotional calm and mindfulness, tranquil minimalist room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYbRsisYEMLLuQaB0FP_RGL2pVuFPisvuGHzlfxDNG6u48uI1tfHQ1fZsiTd7cZBte5jOA8-CzAnXMYVqTVQajTfYb-YceBXUZYxfzEJZIA9J0UjwarvEjXakO9No614Bx007LnQOJttEhEuFrYVXZchO2FjKjMm9muJ2--rE0OG-SkjgmkT4kIT96iqsFiBAcF5N0B_DCyIblvS11BrMHxVV6ipZgbKo8MXupG4wGN_UYjBrSgc8tcA">
+<div class="absolute top-4 left-4 w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-grow justify-between gap-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Тревога, паника и апатия</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Научно обоснованные протоколы работы с паническими атаками, ОКР, фобиями, депрессивными состояниями и потерей сил.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-on-primary-fixed-variant pt-2 group-hover:translate-x-1 transition-all" data-path="trevoga-i-panika" href="#">
+<span class="">Подробнее</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 4: Adolescent -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+<div class="relative h-56 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Friendly therapist speaking warmly with a young person in an inspiring airy library study room with indoor plants and soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAvuNMiNa_bagPaIgofJJd7o-5uSpcWIrcVUizwOFLRIDdLg4vMFiFsRJNVpzoZruNq9g3eeomC11ukKgoTLoIYDai-Toj_zqIE6gTDt2zgISIZmKIEOkYOLavFCXqffFp9oX96ENsRZyPYZF2-w8U6hqZB3wHECPNCangjg-SfjCw68Ywtn1DXwzooyR4fgAiFot-Ip01OrypkyVuF05sI2aPBbU80v-E5Vk3J8XmOQCDnV9CKWNy4w">
+<div class="absolute top-4 left-4 w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">face</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-grow justify-between gap-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Подростковая терапия</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Поддержка в преодолении сепарации, учебного стресса, трудностей взросления, буллинга и выстраивании диалога с родителями.
+              </p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-on-primary-fixed-variant pt-2 group-hover:translate-x-1 transition-all" data-path="uslugi" href="#">
+<span class="">Подробнее</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Centered Button -->
+<div class="flex justify-center mt-space-lg">
+<a class="inline-flex items-center justify-center gap-2 px-space-lg py-3.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors shadow-sm" data-path="uslugi" href="#">
+<span class="">Смотреть все 16 направлений</span>
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 4. HOW IT WORKS -->
+<section class="w-full max-w-7xl mx-auto px-gutter py-space-xl lg:py-margin-md">
+<div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-space-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary mb-2 font-semibold">Простой процесс</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Как это работает</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Простой и прозрачный путь к первой встрече и бережной поддержке.</p>
+</div>
+<!-- 4 Steps Horizontal Layout -->
+<div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Step 1 -->
+<div class="flex flex-col items-start bg-surface-container-lowest p-space-lg rounded-lg shadow-sm relative">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-primary flex items-center justify-center font-headline-sm text-headline-sm mb-space-md">
+          01
+        </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Заявка</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Вы заполняете короткую анкету о вашем запросе, целях, удобном времени и пожеланиях по психотерапевту.
+        </p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-start bg-surface-container-lowest p-space-lg rounded-lg shadow-sm relative">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-primary flex items-center justify-center font-headline-sm text-headline-sm mb-space-md">
+          02
+        </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Координатор</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Клинический координатор анализирует запрос и уточняет детали для максимально точного терапевтического мэтчинга.
+        </p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-start bg-surface-container-lowest p-space-lg rounded-lg shadow-sm relative">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-primary flex items-center justify-center font-headline-sm text-headline-sm mb-space-md">
+          03
+        </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Подбор специалиста</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Мы предлагаем 2–3 кандидатуры психологов с релевантным клиническим опытом, супервизиями и доступным слотом.
+        </p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-start bg-surface-container-lowest p-space-lg rounded-lg shadow-sm relative">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed text-tertiary flex items-center justify-center font-headline-sm text-headline-sm mb-space-md">
+          04
+        </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Первая сессия</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Знакомство и первая 50-минутная онлайн-встреча в защищенном видеокабинете с формированием плана терапии.
+        </p>
+</div>
+</div>
+</section>
+<!-- 5. ABOUT SECTION -->
+<section class="w-full py-space-xl lg:py-margin-md bg-surface-container-low/50">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Left: Studio / Office Imagery -->
+<div class="lg:col-span-6 relative">
+<div class="rounded-lg overflow-hidden shadow-md bg-surface aspect-[4/3] lg:aspect-square max-h-[540px]">
+<img class="w-full h-full object-cover" data-alt="A warm, welcoming psychological clinic therapy lounge with comfortable moss green armchairs, wooden round coffee table, warm ambient lighting, lush fiddle-leaf fig plants, and neutral beige walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-cvsH8dPl3iRhZ-CU-1reLd98c4CDSPlYBFEAa3tBdNsmexjoN69cDVIMvGq3L4FytnyZAoT5Pyf7EpZJL43mKWz3wgxxajWcn_IjkTh5sc7TXmkGAIdD0DrLbq2ooNMuHnnRc4E5KIZPW7MEXSkJi7mh-XXIJnwWc41IgZV1T-M73OR0sxt6gFDRFF231-oDnqrMqyc4df-yk4aEkTNYBR9MTRR9_T_koiSRpQLlm6vON5vwbV7SNg">
+</div>
+<!-- Editorial Floating Detail Box -->
+<div class="hidden sm:flex absolute -bottom-6 -right-6 p-space-md rounded-DEFAULT bg-surface-container-lowest shadow-lg max-w-xs items-center gap-space-sm">
+<span class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</span>
+<p class="font-body-sm text-[13px] text-on-surface-variant leading-snug">
+              Все специалисты клиники проходят регулярную супервизию и личную терапию.
+            </p>
+</div>
+</div>
+<!-- Right: Text & Key Numbers -->
+<div class="lg:col-span-6 flex flex-col items-start gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary font-semibold">О клинике</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">
+            Бережное пространство доказательной психотерапии
+          </h2>
+<div class="flex flex-col gap-space-sm font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p class="">
+              Клиника «Диалектика» основана практикующими врачами и клиническими психологами. Наше ключевое убеждение отражено в названии: мы соединяем полное эмоциональное принятие человека с готовностью к бережным изменениям его привычных паттернов.
+            </p>
+<p class="">
+              Мы работаем исключительно в доказательных методах (КПТ, ДБТ, ACT, схема-терапия). Это гарантирует, что вы получаете не абстрактные беседы, а понятные инструменты для совладания со стрессом, тревогой и кризисными ситуациями.
+            </p>
+</div>
+<!-- 4 Stats Grid -->
+<div class="grid grid-cols-2 gap-space-md w-full pt-space-xs">
+<div class="p-space-md bg-surface-container-lowest rounded-DEFAULT shadow-sm flex flex-col">
+<span class="font-headline-lg text-[36px] text-primary leading-none font-medium">10+ лет</span>
+<span class="font-body-sm text-[13px] text-on-surface-variant mt-1">опыта клинических основателей</span>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-DEFAULT shadow-sm flex flex-col">
+<span class="font-headline-lg text-[36px] text-primary leading-none font-medium">45+</span>
+<span class="font-body-sm text-[13px] text-on-surface-variant mt-1">сертифицированных специалистов</span>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-DEFAULT shadow-sm flex flex-col">
+<span class="font-headline-lg text-[36px] text-tertiary leading-none font-medium">6 200+</span>
+<span class="font-body-sm text-[13px] text-on-surface-variant mt-1">клиентов обрели опору</span>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-DEFAULT shadow-sm flex flex-col">
+<span class="font-headline-lg text-[36px] text-tertiary leading-none font-medium">98%</span>
+<span class="font-body-sm text-[13px] text-on-surface-variant mt-1">индекс удовлетворенности</span>
+</div>
+</div>
+<!-- Action Button -->
+<div class="pt-space-xs">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-3.5 rounded-full bg-primary text-on-primary hover:bg-on-primary-fixed-variant font-label-md text-label-md transition-colors shadow-sm" data-path="o-nas" href="#">
+<span class="">Подробнее о нас</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. TESTIMONIALS -->
+<section class="w-full max-w-7xl mx-auto px-gutter py-space-xl lg:py-margin-md">
+<div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-space-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary mb-2 font-semibold">Отзывы</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Истории наших клиентов</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Реальный опыт людей, доверивших нам свои уязвимые переживания.</p>
+</div>
+<!-- 3 Editorial Testimonial Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="flex flex-col justify-between bg-surface-container-lowest p-space-lg rounded-lg shadow-sm">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<blockquote class="font-quote-editorial text-quote-editorial text-on-surface italic leading-relaxed">
+            «"Диалектика" помогла мне выйти из глубокого выгорания. Мой психолог помог бережно переосмыслить границы на работе и восстановить сон без чувства вины перед командой.»
+          </blockquote>
+</div>
+<div class="flex items-center gap-space-sm pt-space-lg mt-space-md border-t border-surface-variant/40">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of Anna, 31 years old, smiling gently in warm soft indoor light, natural calm style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa4DycXO4SOi0HpumUhpVZQRXHJu_eYGkPug5gUNGH9y1vDtzeghhU74KcAPkiGOt_kxb5-z0qwvaLgeCYfuZg--kYuVcQqqzRFppG_uPaLlzjXhcg-Vpe_pSYX8A-SLBHUMn8rlypYZXDFsQUSsDWNJ0_RCrJmebTdsS--pBHeyiW1Q8lnNidLyWs8olnKE8t-5ByyXDq4iKGPXbwCs57KPKuwhNpgaf9fVcKrJE6I_j83aXLhqVQVw">
+<div class="flex flex-col">
+<span class="font-body-md font-semibold text-on-surface">Анна М., 31 год</span>
+<span class="font-body-sm text-[13px] text-on-surface-variant">Индивидуальная терапия при выгорании</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="flex flex-col justify-between bg-surface-container-lowest p-space-lg rounded-lg shadow-sm">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<blockquote class="font-quote-editorial text-quote-editorial text-on-surface italic leading-relaxed">
+            «Мы были буквально на грани развода. Благодаря деликатному фасилитатору мы научились слушать друг друга, а не атаковать. Это вернуло близость и спасло наш союз.»
+          </blockquote>
+</div>
+<div class="flex items-center gap-space-sm pt-space-lg mt-space-md border-t border-surface-variant/40">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Couple portrait of Mikhail and Elena smiling calmly together, warm terracotta and sage color palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTyJlc4cb5K3ETRepFKJ_BpC3ROf31Szn4qmwtUNy3rzBl5Ul2y_RqsPnzURt2XI4uW_rBCdIFW-Tsx38HS4heU65rAoQamNTlM9uZjXM0nXBGgqX7kChsmO9zEAlMUqq9wBd-H3_d2noRUbFBWRTutd65G7isxrJEWTov9OVD2rKVOEUWL173yY52o1ZKU2owU3SizwwEls6d70sXaMJ-2th9sbm6alz0KAvOoo5DTmmMasnhSvTFFQ">
+<div class="flex flex-col">
+<span class="font-body-md font-semibold text-on-surface">Михаил и Елена</span>
+<span class="font-body-sm text-[13px] text-on-surface-variant">Парная терапия (8 месяцев)</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="flex flex-col justify-between bg-surface-container-lowest p-space-lg rounded-lg shadow-sm">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<blockquote class="font-quote-editorial text-quote-editorial text-on-surface italic leading-relaxed">
+            «После 10 сессий я полностью избавился от панических атак в метро. Четкие поведенческие протоколы, поддержка между встречами и полное доверие специалисту.»
+          </blockquote>
+</div>
+<div class="flex items-center gap-space-sm pt-space-lg mt-space-md border-t border-surface-variant/40">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of Dmitry, 27 years old, warm candid photo, confident and serene expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7qvlxzEXuZmMKROT5aVyy1SqokHAdtbCBLbdvQxv3zMdrTyd6VrW1BKPS4HtPUkCMbwp6Sa74wI-uJ5R14qpk5EoqBINKNXEKm5GPDaEUI74_-qaqX1yzcmUOpELpmAn9VPHp4RlvGIWVpTHHjvuoDycw27p0v_KM6h9MwDbocAgFZPYxHGVqnhVV8xFWgpj1SXqb9a7d2j1jdG8KUuj4tGkgiZ4nuiBBL9tB2MR2r5lWvGLxu9ZQ7w">
+<div class="flex flex-col">
+<span class="font-body-md font-semibold text-on-surface">Дмитрий К., 27 лет</span>
+<span class="font-body-sm text-[13px] text-on-surface-variant">КПТ при панических атаках</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. FAQ ACCORDION -->
+<section class="w-full py-space-xl lg:py-margin-md bg-surface-container-low/40">
+<div class="max-w-4xl mx-auto px-gutter">
+<!-- Header -->
+<div class="flex flex-col items-center text-center mb-space-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary mb-2 font-semibold">Вопросы и ответы</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Частые вопросы</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Ответы на все, что важно знать перед началом психотерапии.</p>
+</div>
+<!-- Accordion Items List -->
+<div class="flex flex-col gap-space-sm" id="faq-container">
+<!-- Accordion 1 (Default Open) -->
+<div class="bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm transition-all duration-200">
+<button aria-expanded="true" class="w-full flex items-center justify-between p-space-md sm:p-space-lg text-left gap-space-md hover:text-primary transition-colors faq-toggle" type="button">
+<span class="font-headline-sm text-[18px] sm:text-headline-sm text-on-surface font-medium">Как проходит первая консультация и сколько она длится?</span>
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 text-on-surface-variant faq-icon">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</span>
+</button>
+<div class="px-space-md sm:px-space-lg pb-space-lg text-on-surface-variant font-body-md text-body-md leading-relaxed faq-content">
+            Сессия длится ровно 50 минут. Это полноценная диагностическая встреча, где вы знакомитесь со специалистом, подробно обсуждаете ваш запрос, ожидания и текущее эмоциональное состояние. К концу встречи психолог предлагает первичную концептуализацию и план дальнейшей совместной работы.
+          </div>
+</div>
+<!-- Accordion 2 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm transition-all duration-200">
+<button aria-expanded="false" class="w-full flex items-center justify-between p-space-md sm:p-space-lg text-left gap-space-md hover:text-primary transition-colors faq-toggle" type="button">
+<span class="font-headline-sm text-[18px] sm:text-headline-sm text-on-surface font-medium">Как понять, какой специалист мне подходит?</span>
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 text-on-surface-variant faq-icon">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</span>
+</button>
+<div class="hidden px-space-md sm:px-space-lg pb-space-lg text-on-surface-variant font-body-md text-body-md leading-relaxed faq-content">
+            Вам не обязательно самостоятельно разбираться в методах. Наш клинический координатор изучает вашу анкету и подбирает терапевта, специализирующегося именно на вашем типе запроса (тревога, отношения, горе, выгорание).
+          </div>
+</div>
+<!-- Accordion 3 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm transition-all duration-200">
+<button aria-expanded="false" class="w-full flex items-center justify-between p-space-md sm:p-space-lg text-left gap-space-md hover:text-primary transition-colors faq-toggle" type="button">
+<span class="font-headline-sm text-[18px] sm:text-headline-sm text-on-surface font-medium">Что делать, если мне не подойдет психолог?</span>
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 text-on-surface-variant faq-icon">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</span>
+</button>
+<div class="hidden px-space-md sm:px-space-lg pb-space-lg text-on-surface-variant font-body-md text-body-md leading-relaxed faq-content">
+            Терапевтический альянс — основа успеха. Если после первой сессии вы почувствуете, что контакта не возникло, мы бесплатно подберем другого специалиста из команды без неловких объяснений.
+          </div>
+</div>
+<!-- Accordion 4 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm transition-all duration-200">
+<button aria-expanded="false" class="w-full flex items-center justify-between p-space-md sm:p-space-lg text-left gap-space-md hover:text-primary transition-colors faq-toggle" type="button">
+<span class="font-headline-sm text-[18px] sm:text-headline-sm text-on-surface font-medium">В каких подходах работают терапевты «Диалектики»?</span>
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 text-on-surface-variant faq-icon">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</span>
+</button>
+<div class="hidden px-space-md sm:px-space-lg pb-space-lg text-on-surface-variant font-body-md text-body-md leading-relaxed faq-content">
+            Мы работаем в подходах «третьей волны» когнитивно-поведенческой терапии: классическая КПТ, диалектико-поведенческая терапия (ДБТ), терапия принятия и ответственности (ACT) и схема-терапия. Все методы подтверждены международными клиническими рекомендациями.
+          </div>
+</div>
+<!-- Accordion 5 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm transition-all duration-200">
+<button aria-expanded="false" class="w-full flex items-center justify-between p-space-md sm:p-space-lg text-left gap-space-md hover:text-primary transition-colors faq-toggle" type="button">
+<span class="font-headline-sm text-[18px] sm:text-headline-sm text-on-surface font-medium">Гарантируете ли вы конфиденциальность сессий?</span>
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 text-on-surface-variant faq-icon">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</span>
+</button>
+<div class="hidden px-space-md sm:px-space-lg pb-space-lg text-on-surface-variant font-body-md text-body-md leading-relaxed faq-content">
+            Безусловно. Все обсуждения, заметки и личные данные защищены врачебной тайной и этическим кодексом психотерапевта. Онлайн-сессии проходят в защищенных видеокомнатах со сквозным шифрованием.
+          </div>
+</div>
+<!-- Accordion 6 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm transition-all duration-200">
+<button aria-expanded="false" class="w-full flex items-center justify-between p-space-md sm:p-space-lg text-left gap-space-md hover:text-primary transition-colors faq-toggle" type="button">
+<span class="font-headline-sm text-[18px] sm:text-headline-sm text-on-surface font-medium">Как оплачивать сессии и можно ли перенести встречу?</span>
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 text-on-surface-variant faq-icon">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</span>
+</button>
+<div class="hidden px-space-md sm:px-space-lg pb-space-lg text-on-surface-variant font-body-md text-body-md leading-relaxed faq-content">
+            Оплата производится онлайн картами любых банков (РФ и зарубежных). Перенос или отмена сессии возможны без списания средств не позднее чем за 12 часов до назначенного времени.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. CTA BANNER -->
+<section class="w-full max-w-7xl mx-auto px-gutter my-space-xl lg:my-margin-lg">
+<div class="relative bg-primary text-on-primary rounded-xl p-space-lg md:p-margin-md overflow-hidden shadow-xl">
+<!-- Gentle organic decorative background element -->
+<div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-primary-container/40 blur-2xl pointer-events-none"></div>
+<div class="absolute -left-20 -top-20 w-72 h-72 rounded-full bg-secondary/30 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 max-w-3xl flex flex-col items-start gap-space-md">
+<div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-container-lowest/15 text-primary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+<span class="">Забота начинается с первого шага</span>
+</div>
+<h2 class="font-display text-display-mobile md:text-headline-lg text-on-primary tracking-tight">
+          Сделайте первый шаг к душевной устойчивости и спокойствию
+        </h2>
+<p class="font-body-lg text-body-lg text-primary-fixed leading-relaxed max-w-2xl">
+          Заполните короткую анкету за 3 минуты — наш клинический координатор бережно свяжется с вами и подберет проверенного специалиста.
+        </p>
+<!-- Action Row -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-sm w-full">
+<a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-4 rounded-full bg-surface text-primary font-label-md text-label-md hover:bg-surface-container-lowest transition-all shadow-md active:scale-95" data-path="zapis-na-priyom" href="#">
+<span class="">Записаться на консультацию</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<div class="flex items-center gap-space-md text-surface-container-lowest/90 font-body-sm text-body-sm">
+<a class="hover:text-surface-container-lowest flex items-center gap-1 transition-colors" href="tel:+79270060280"><span class="material-symbols-outlined text-[16px]">call</span><span class="">+7 (927) 006-02-80</span></a>
+<span class="text-surface-container-lowest/40">•</span>
+<a class="hover:text-surface-container-lowest flex items-center gap-1 transition-colors underline underline-offset-4" href="#" rel="noopener" target="_blank"><span class="">или напишите в Max</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple interactive accordion logic
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggles = document.querySelectorAll('.faq-toggle');
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const content = toggle.nextElementSibling;
+        const icon = toggle.querySelector('.faq-icon span');
+        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+
+        // Close others for neat single-expanded state
+        toggles.forEach(otherToggle => {
+          if (otherToggle !== toggle) {
+            otherToggle.setAttribute('aria-expanded', 'false');
+            otherToggle.nextElementSibling.classList.add('hidden');
+            const otherIcon = otherToggle.querySelector('.faq-icon span');
+            if (otherIcon) otherIcon.textContent = 'add';
+          }
+        });
+
+        if (isExpanded) {
+          toggle.setAttribute('aria-expanded', 'false');
+          content.classList.add('hidden');
+          icon.textContent = 'add';
+        } else {
+          toggle.setAttribute('aria-expanded', 'true');
+          content.classList.remove('hidden');
+          icon.textContent = 'remove';
+        }
+      });
+    });
+  });
+</script></main><footer class="w-full bg-inverse-surface text-inverse-on-surface pt-margin-md pb-space-lg"><div class="max-w-7xl mx-auto px-gutter"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-lg pb-margin-md"><div class="flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img src="https://lh3.googleusercontent.com/aida/AEtjO1X4fqmRUr3aeSTJ_43DWdbY5BiAYysCqhC3GTL61phUOggcIxELD1QTlgi52ziyURFO2zs89euUf1dCmvCwHJmBRm_2WWOaxTBLL2K7SgcEmvDC_6OQGulFQt0VG0rI557tRoZqGTFC6R7NqAyM77Ii7r5OIQlE9zbV0qFePkHQV6M2-R0RQVmF1wVcTxim0Um9lBPIbLiWLaa4eLxzLrT7Wtbc7qAqZNBwi_sVfDZPToAJAk0Cf22BYj04" alt="Диалектика" class="w-9 h-9 rounded-full object-contain border border-secondary-container shadow-sm flex-shrink-0"><span class="font-headline-sm text-headline-sm text-surface-container-lowest">Диалектика</span></div><p class="font-body-sm text-body-sm text-surface-dim leading-relaxed">Онлайн-клиника доказательной психотерапии. Помогаем обрести гармонию, преодолеть тревогу и наладить отношения в безопасном пространстве.</p><div class="flex items-center gap-space-sm pt-space-xs"><a aria-label="Max" class="w-10 h-10 rounded-full bg-surface-container-highest/20 hover:bg-surface-container-highest/30 flex items-center justify-center text-inverse-on-surface transition-colors" href="#" rel="noopener" target="_blank"><span class="material-symbols-outlined text-[18px]">send</span></a><a aria-label="VKontakte" class="w-10 h-10 rounded-full bg-surface-container-highest/20 hover:bg-surface-container-highest/30 flex items-center justify-center text-inverse-on-surface transition-colors" href="https://vk.com" rel="noopener" target="_blank"><span class="material-symbols-outlined text-[18px]">forum</span></a><a aria-label="YouTube" class="w-10 h-10 rounded-full bg-surface-container-highest/20 hover:bg-surface-container-highest/30 flex items-center justify-center text-inverse-on-surface transition-colors" href="https://youtube.com" rel="noopener" target="_blank"><span class="material-symbols-outlined text-[18px]">play_circle</span></a></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-headline-sm text-headline-sm text-surface-container-lowest mb-space-xs">Быстрые ссылки</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-dim"><li class="leading-loose"><a class="hover:text-surface-container-lowest transition-colors" data-path="o-nas" href="#">О нас</a></li><li class="leading-loose"><a class="hover:text-surface-container-lowest transition-colors" data-path="specialisty" href="#">Наши психологи</a></li><li class="leading-loose"><a class="hover:text-surface-container-lowest transition-colors" data-path="ceny-i-formaty" href="#">Цены и форматы</a></li><li class="leading-loose"><a class="hover:text-surface-container-lowest transition-colors" data-path="blog" href="#">Блог и статьи</a></li><li class="leading-loose"><a class="hover:text-surface-container-lowest transition-colors" data-path="kontakty" href="#">Контакты</a></li></ul></div><div class="flex flex-col gap-space-sm"><h3 class="font-headline-sm text-headline-sm text-surface-container-lowest mb-space-xs">Направления и услуги</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-dim"><li class="leading-loose"><a class="hover:text-surface-container-lowest transition-colors" data-path="individualnaya-terapiya" href="#">Индивидуальная терапия</a></li><li class="leading-loose"><a class="hover:text-surface-container-lowest transition-colors" data-path="semeynaya-konsultaciya" href="#">Семейная консультация</a></li><li class="leading-loose"><a class="hover:text-surface-container-lowest transition-colors" data-path="trevoga-i-panika" href="#">Тревога и паника</a></li><li class="leading-loose"><a class="hover:text-surface-container-lowest transition-colors" data-path="depressivnye-sostoyaniya" href="#">Депрессивные состояния</a></li><li class="leading-loose"><a class="hover:text-surface-container-lowest transition-colors" data-path="kpt-i-dbt-terapiya" href="#">КПТ и ДБТ терапия</a></li></ul></div><div class="flex flex-col gap-space-sm"><h3 class="font-headline-sm text-headline-sm text-surface-container-lowest mb-space-xs">Контакты и запись</h3><div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-dim"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">call</span><a class="hover:text-surface-container-lowest transition-colors" href="tel:+79270060280">+7 (927) 006-02-80</a></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">mail</span><a class="hover:text-surface-container-lowest transition-colors" href="mailto:info@dialektika.clinic">info@dialektika.clinic</a></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">schedule</span><span class="">Ежедневно 09:00 - 21:00 МСК</span></div></div><div class="pt-space-sm"><a class="inline-flex items-center justify-center gap-space-xs h-11 px-space-md rounded-full bg-surface-container-highest/25 hover:bg-surface-container-highest/35 text-surface-container-lowest font-label-md text-label-md transition-all" href="#" rel="noopener" target="_blank"><span class="material-symbols-outlined text-[18px]">near_me</span>Написать в Max</a></div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-body-sm text-[13px] text-surface-dim/80"><p class="">© 2025 Клиника «Диалектика». Все права защищены.</p><div class="flex flex-wrap items-center gap-space-md"><a class="hover:text-surface-container-lowest transition-colors" data-path="politika-konfidencialnosti" href="#">Политика конфиденциальности</a><a class="hover:text-surface-container-lowest transition-colors" data-path="polzovatelskoe-soglashenie" href="#">Пользовательское соглашение</a><a class="hover:text-surface-container-lowest transition-colors" data-path="medicinskaya-licenziya" href="#">Медицинская лицензия</a></div></div></div></footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
